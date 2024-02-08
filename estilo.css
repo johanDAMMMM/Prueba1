@@ -119,11 +119,7 @@ span {
     height: 80px;
 }
 
-.v-line{
-    display: flex;
+.v-line {
     border-left: thick solid #000;
-    height:100%;
-    left: 50%;
-    position: absolute;
-    margin-top: -20;
+    height: 100%;
 }
