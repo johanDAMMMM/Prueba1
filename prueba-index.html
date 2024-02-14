@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Evolution</title>
+
+    <link rel="stylesheet" href="estilo-prueba.css">
+    <link rel="stylesheet" href="prueba-index2.css">
+    <link rel="stylesheet" href="menu/Servicios.html">
+    <link rel="stylesheet" href="Estilos css/estilos.css">  
+</head> 
+<div class="fondodetodo.jpg">
+            <header class="Computerevolution">
+                
+                 <p>MULTIMEDIA WEB</p>
+                </header>
+            <header class="">
+                <a class="Servicios" href="Internet.html"> <i class="icon-Television">
+                    <span> </span>
+                    <span> </span>   
+                    <span> </span>
+                    <span> </span>                    
+                TV</i></a>
+                
+
+        
+                <a class="Servicios" href="Servicios.html"> <i class="icon-Servicios">
+                    <span> </span>
+                    <span> </span>   
+                    <span> </span>
+                    <span> </span>                    
+                    Pelicula
+                    </i></a>
+                    
+                    <a class="Servicios" href="Television.html">  <i class="icon-Servicios-1">
+                        <span> </span>  
+                        <span> </span>   
+                        <span> </span>
+                        <span> </span>                    
+                    Musica </i></a>
+                    
+                    <a class="Servicios" href="Internet.html"> <i class="icon-Internet">
+                        <span> </span>
+                        <span> </span>   
+                        <span> </span>
+                        <span> </span>                    
+                    Videos Musicales</i></a>
+                    
+                    <a class="Servicios" href="Telefonia.html">  <i class="icon-Servicios">
+                        <span> </span>   
+                        <span> </span>   
+                        <span> </span>   
+                        <span> </span>                    
+                    Libros</i></a>
+                    
+                    <a class="Servicios" href= > <i class="icon-Television">
+                        <span> </span>
+                        <span> </span>   
+                        <span> </span>
+                        <span> </span>                    
+                    Juegos</i></a>
+                    
+                </header> 
+               
+    <body> 
+    <div class="cuerpos">
+        <h1>Canales de TV</h1>
+        <div class="cuerpo">
+            <div class="card">
+                <div class="content">
+                    <div id="youtube-player"></div>
+                    <h2>Musica</h2>
+                    <a href="#">EN VIVO</a>
+                    <button onmousedown="startVolumeChange(2)" onmouseup="stopVolumeChange()" onmouseleave="stopVolumeChange()">Subir Volumen</button>
+                    <button onmousedown="startVolumeChange(-2)" onmouseup="stopVolumeChange()" onmouseleave="stopVolumeChange()">Bajar Volumen</button>
+                </div>
+            </div>
+            </div>
+            
+            <div class="card" style="--i:url(./pc2.jpg)">
+                <div class="content">
+                    
+                    <h2> GamerZone USD$ 199.9</h2>
+                    <a href="#">See More Information...</a>
+                    
+                    <i class="fa-solid fa-house-flag"></i>
+                </div>
+            </div>
+
+            
+        </div> 
+
+    </div>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api'; 
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+        var player;
+        var volumeChangeInterval;
+    
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '315',
+                width: '560',
+                videoId: 'xbbRzPVKgMw',  // Cambia el videoId aquí
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+    
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+    
+        function startVolumeChange(direction) {
+            // Establecer un intervalo para cambiar gradualmente el volumen
+            volumeChangeInterval = setInterval(function () {
+                changeVolume(direction);
+            }, 100); // Ajusta el intervalo según sea necesario
+        }
+    
+        function stopVolumeChange() {
+            // Limpiar el intervalo cuando se deja de presionar el botón
+            clearInterval(volumeChangeInterval);
+        }
+    
+        function changeVolume(direction) {
+            // Obtener el volumen actual
+            var currentVolume = player.getVolume();
+    
+            // Establecer los límites máximo y mínimo
+            var maxVolume = 100;
+            var minVolume = 0;
+    
+            // Calcular el nuevo volumen
+            var newVolume = currentVolume + direction; // Cambio más pequeño
+    
+            // Aplicar límites máximo y mínimo
+            newVolume = Math.min(maxVolume, Math.max(minVolume, newVolume));
+    
+            // Cambiar el volumen del reproductor
+            if (player) {
+                player.setVolume(newVolume);
+            }
+        }
+    </script>
+    </body>
+
+<img src="" alt="" class="">
+
+</body>
+</html>

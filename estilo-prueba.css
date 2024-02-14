@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.Computerevolution {
+    font-family:'Times New Roman', Times, serif;
+    justify-content: center;
+    font-size: 100px;
+    color: aliceblue;
+    text-shadow: 12px 20px 4px rgba(1, 0, 0, 1);
+    background-color:navy;
+    
+    
+}
+
+
+.container {
+    border: solid 1px rgba(red, green, blue, alpha)
+
+}
+header {
+    display: flex;
+    justify-content:center;
+    gap: 5%;
+    padding: 20px;
+    background-color:#000080;
+    align-items: center;
+    border: 5px solid navy
+    
+    
+
+}
+header >p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(FondoPantalla.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.Servicios {
+    margin: 1;
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: rgb(red, green, blue);
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+    
+    overflow-anchor: .0;
+    overflow-x: -.5;
+    overflow-y: -.5;
+    text-shadow: 5px 10px 5px rgba(1, 0, 0, 1);
+}
+
+.Servicios:hover {
+    color: darkgreen
+    
+}
+.Servicios span {
+    position: absolute;
+    background: white;
+    transition: .5s;
+    
+}
+.Servicios span:nth-child(1) {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+
+}
+.Servicios span:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+    
+    
+}
+.Servicios span:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+    
+}
+.Servicios span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+    
+}
+.Servicios:hover span:nth-child(1) {
+    left: 0;
+}
+.Servicios:hover span:nth-child(2) {
+    right: 0;
+}
+.Servicios:hover span:nth-child(3) {
+    bottom: 0;
+}
+.Servicios:hover span:nth-child(4) {
+    top: 0;
+}
+.fa-solid {
+    color: white;
+    font-size: 100px;
+    opacity: 77%;
+}
+.contacto {
+    justify-content: center;
+    display: flex;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+.fa-brands {
+    color: white;
+    opacity: 100%;
+    font-size: 70px;
+    justify-content:right;
+    display: flex;
+    
+}
+.corte {
+    width: 100%;
+}
