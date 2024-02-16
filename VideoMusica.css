@@ -1,13 +1,25 @@
-#contenedor-video{
-    width: 60%;
-    margin: auto;
+body {
+    background-image: url(FondoPantalla.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 50px;
 }
 
-video{
-    width: 100%;
+#fileInput{
+    display: none;
 }
 
-input[type="range"] {
-    width: 100%;
+#customButtom{
+    padding: 10px, 20px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#nombreArchivo{
     margin-top: 10px;
+}
+
+#contenedor-video{
+    margin-top: 20px;
 }

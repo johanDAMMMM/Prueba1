@@ -1,0 +1,53 @@
+body {
+    background-image: url(FondoPantalla.jpg);
+    font-family: Arial, sans-serif;
+    background-color: darkgray;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .contenedor-login {
+    background-color:  whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    background-color: blue;
+    margin: 5px;
+    text-align: center;
+    font-size: 14.6px;
+    color: white;
+  }

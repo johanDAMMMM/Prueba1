@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <script src="Login.js"></script>
+  <div class="contenedor-login">
+    <h1>Login</h1>
+    <form onsubmit="return dirigirOtraPagina()">
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" size="15" maxlength="15" minlength="5" placeholder="Ingrese su contraseña" required/>
+      <label for="confirmarContraseña">Confirmar Contraseña:</label>
+      <input type="password" id="confirmarContraseña" name="confirmarContraseña" size="15" maxlength="15" minlength="5" placeholder="Confirme su contraseña" required/>
+      <input type="submit" href="Inventario.html" onclick="dirigirOtraPagina()" value="Ingresar">
+      <br>
+      <a href="Registro.html">¿No tienes cuenta? Create Una</a>
+    </form>
+        
+  </div>
+</body>
+</html>

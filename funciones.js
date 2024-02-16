@@ -1,3 +1,7 @@
+function icon1(){
+    window.location.href="Login.html"
+}
+
 function Tv(){
     window.location.href="TV.html"
 }
