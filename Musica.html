@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musica</title>
+    <link rel="stylesheet" href="Musica.css">
 </head>
 <body>
-    <h1>Musica</h1>
+    <h1>Reproductor de Musica</h1>
+
+    <label for="fileInput" id="customButton">Seleccione Archivo MP3</label>
+    <input type="file" id="fileInput" accept=".mp3" onchange="">
+
+    <div id="nombreArchivo"></div>
+
+    <div id="contenedorAudio">
+        <audio controls id="reproductorAudio" style="max-width: 70%;"></audio>
+    </div>
+
 </body>
 </html>
