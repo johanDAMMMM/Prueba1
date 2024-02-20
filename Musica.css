@@ -21,4 +21,8 @@ body {
 #contenedorAudio{
     display: none;
     margin-top: 20px;
+} 
+
+#infoContenedor{
+    margin-top: 20px;
 }

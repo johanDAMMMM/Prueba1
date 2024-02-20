@@ -8,11 +8,21 @@
 </head>
 <body>
     <h1>Reproductor de Musica</h1>
-
+    <script src="Musica.js"></script>
     <label for="fileInput" id="customButton">Seleccione Archivo MP3</label>
-    <input type="file" id="fileInput" accept=".mp3" onchange="">
+    <input type="file" id="fileInput" accept="MP3/.mp3" onchange="mostrarAudio()">
 
     <div id="nombreArchivo"></div>
+    <div id="infoContenedor">
+        <label for="generoInput">Genero:</label>
+        <input type="text" id="generoInput" placeholder="Ingrese el genero">
+
+        <label for="nombreCancionInput">Nombre de la Canción:</label>
+        <input type="text" id="nombreCancionInput" placeholder="Ingrese el nombre de la canción">
+
+        <label for="descripcionInput">Descripción:</label>
+        <textarea id="descripcionInput" placeholder="Ingrese una Descripción">
+    </div>
 
     <div id="contenedorAudio">
         <audio controls id="reproductorAudio" style="max-width: 70%;"></audio>
