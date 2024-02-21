@@ -5,13 +5,9 @@ $username = "root";
 $password = "";
 $dbname = "usuario";
 
-$conexion = new mysqli($servername, $username, $password, $dbname);
+$conexion = mysqli_connect($servername, $username, $password, $dbname);
 
-if ($conexion->connect_error){
-    die("Conexion fallida: ".$conexion->connect_error);
+if (!$conexion) {
+    die("Error al conectar la base de datos: ".mysqli_connect_error());
 }
-
-print_r($conexion);
-
-echo json_encode($conexion);
 ?>

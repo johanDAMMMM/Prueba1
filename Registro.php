@@ -1,24 +1,29 @@
 <?php
+    $conexion = mysqli_connect("loaclhost", "root", "", "usuario");
 
-    include "conexion.php";
+    if (!$conexion) {
+        die("Error al conectar la base de datos: ".mysqli_connect_error());
+    }
 
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
-    $idNumero = $_POST["idNumero"];
-    $celular = $_POST["celular"];
-    $usuario = $_POST["usuario"];
+    $correo = $_POST["correo"];
     $contraseña = $_POST["contraseña"];
-    $email = $_POST["email"];
-    $rol = $_POST["rol"];
+    
+    $nombre = mysqli_real_escape_string($conexion, $nombre);
+    $apellido = mysqli_real_escape_string($conexion, $apellido);
+    $correo = mysqli_real_escape_string($conexion, $correo);
+    $contraseña = mysqli_real_escape_string($conexion, $contraseña);
+    
 
-    $query = "INSERT INTO usuario(nombre, apellido, idNumero, celular, usuario, contraseña, email, rol)
-              VALUES($nombre, $apellido, $idNumero, $celular, $usuario, $contraseña, $email, $rol )";
+    $sql = "INSERT INTO usuario (nombre, apellido, correo, contraseña) VALUES ($nombre, $apellido, $correo, $contraseña)";
+    $resultado = mysqli_query($conexion, $sql);
 
-    $ejecutar = mysql_query($conexion);
-
-    if($ejecutar){
-        echo "Usuario guardado correctamente";
-    }else{
-        echo"!ERROR¡ Usuario guardado incorrectamente";
+    if ($resultado) {
+        echo "<p>Usuario registrado correctamente.</p>";
+    } else{
+        echo "<p>Error al registrar al usuario.</p>". mysqli_error($conexion) ."</p>";
     }
+
+    mysqli_close($conexion);
 ?>

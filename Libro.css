@@ -1,0 +1,17 @@
+body {
+    background-image: url(FondoPantalla.jpg);
+    font-family: Arial, sans-serif;
+    background-color: darkgray;
+}
+
+#fileInput {
+  margin: 10px;
+  padding: 10px, 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#botonSubir:hover {
+    background-color: #ddd;
+  }

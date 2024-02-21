@@ -4,23 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libros</title>
+    <link rel="stylesheet" href="Libro.css">
 </head>
 <body>
     <h1>Libros</h1>
-    <script src="Musica.js"></script>
-    <label for="fileInput" id="customButton">Seleccione Libro PDF</label>
-    <input type="file" id="fileInput" accept=".pdf" onchange="mostrarLibro()">
+    <script src="Libro.js"></script>
+    <input type="file" id="fileInput"  accept=".pdf">
+    <button id="botonSubir" onchange="pdf()">Subir Libro</button>
 
-    id="nombreArchivo"></div>
-    <div id="infoContenedor">
-        <label for="tituloInput">:</label>
-        <input type="text" id="generoInput" placeholder="Ingrese el genero">
-
-        <label for="nombreCancionInput">Nombre de la Canción:</label>
-        <input type="text" id="nombreCancionInput" placeholder="Ingrese el nombre de la canción">
-
-        <label for="descripcionInput">Descripción:</label>
-        <textarea id="descripcionInput" placeholder="Ingrese una Descripción">
-    </div>
 </body>
 </html>
