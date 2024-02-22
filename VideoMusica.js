@@ -11,7 +11,7 @@ function mostrarNombreArchivo(){
     var input = document.getElementById("fileInput");
     var output = document.getElementById("nombreArchivo");
     var video = document.getElementById("reproductorVideo");
-    var cotenedorVideo = document.getElementById("contenedorVideo");
+    var contenedorVideo = document.getElementById("contenedorVideo");
 
 
     output.textContent = "Archivo seleccionado " +input.files[0].name;

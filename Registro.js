@@ -34,3 +34,8 @@ fetch("ruta/a/tu/Registro.php", {
 .catch(error => {
     console.error("Error en la solicitud AJAX", error)
 })
+
+function OtraPagina(){
+    window.location.href="inicio.html";
+    return true;
+}
