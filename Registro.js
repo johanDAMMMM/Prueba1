@@ -1,34 +1,36 @@
-function Registro(){
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contenedor-registro");
-        const message = document.getElementById("message");
-        
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            const nombre = document.getElementById("nombre").value;
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contenedor-registro");
+    const message = document.getElementById("message");
+})
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value;
             const apellido = document.getElementById("apellido").value;
-            const cedula = document.getElementById("cedula").value;
-            const telefono = document.getElementById("telefono").value;
             const usuario = document.getElementById("usuario").value;
             const contraseña = document.getElementById("contraseña").value;
-            const confirmcontraseña = document.getElementById("email").value;
-            const rol = document.getElementById("rol").value;
-            
-        if (contraseña === contraseña) {
-            message.textContent = "Registro exitoso!";
-            message.style.color = "green";
+            const confirmcontraseña = document.getElementById("correo").value;
+})
 
-        }else{
-            message.textContent = "Las contraseñas no coinciden.";
-            message.style.color = "red";
-        }
-    });
-});
+const formData = new FormData();
+formData.append("nombre", nombre);
+formData.append("apellido", apellido);
+formData.append("usuario", usuario);
+formData.append("contraseña", contraseña);
+formData.append("correo", correo);
 
-xhr.onerror = function() {
-    console.error("Error en la solicitud AJAX");
-}
-
-xhr.open("GET", "ruta/a/tu/conexion.php", true)
-
-}
+fetch("ruta/a/tu/Registro.php", {
+    method: "POST",
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    if (data.success) {
+        message.textContent = "Registro exitoso!"
+    } else{
+        message.textContent = "Error en el registro: "+data.message;
+    }
+})
+.catch(error => {
+    console.error("Error en la solicitud AJAX", error)
+})

@@ -1,8 +1,12 @@
 <?php
-    $conexion = mysqli_connect("loaclhost", "root", "", "usuario");
+    include "conexion.php";
+
+    $conexion = mysqli_connect("localhost", "root", "", "usuario");
 
     if (!$conexion) {
-        die("Error al conectar la base de datos: ".mysqli_connect_error());
+        $response = array("success" => false, "message" => "Error en la conexion a la base de datos: ".mysqli_connect_error());
+        echo json_encode($response);
+        exit; 
     }
 
     $nombre = $_POST["nombre"];
@@ -20,9 +24,11 @@
     $resultado = mysqli_query($conexion, $sql);
 
     if ($resultado) {
-        echo "<p>Usuario registrado correctamente.</p>";
+        $response = array("success" => true, "message" => "Usuario registrado correctamente.");
+        echo json_encode($response);
     } else{
-        echo "<p>Error al registrar al usuario.</p>". mysqli_error($conexion) ."</p>";
+        $response = array("success" => true, "message" => "Error al registrar el usuario: ".mysqli_error($conexion));
+        echo json_encode($response);
     }
 
     mysqli_close($conexion);
